@@ -1,0 +1,43 @@
+
+
+Debut
+
+effectuerCalcul := vrai
+tant que effectuerCalcul = vrai
+    calculeVrai := vrai
+    lire nombre1
+    lire operation
+    lire nombre2
+    si operation == "+"
+        resultat = nombre1 + nombre2
+        sinon si operation =="-"
+            resultat = nombre1 - nombre2
+        sinon si operation == "x"
+            resultat = nombre1 x nombre2
+        sinon si operation == "/" 
+            si nombre2 != 0 
+                resultat = nombre1 / nombre2
+            sinon
+                calculeVrai = false
+                erreur ("impossible de diviser un nombre par 0")
+        sinon si operation == "%"  
+            si nombre2 != 0
+                resultat = nombre1 % nombre2
+            sinon
+                calculeVrai = false
+                afficher erreur ("impossible de diviser par 0")
+    sinon 
+        calculeVrai = false
+        afficher erreur (choisissez entre + , / , x , % ou -)
+    finsi
+    si calculeVrai = vrai
+        afficher resultat
+    finsi
+question : voukez vous continuez (oui/non)
+lire choix
+si choix == oui
+    effectuerCalcul = vrai
+sinon 
+    effectuerCalcul = faux
+fintantque
+Fin

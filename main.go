@@ -7,11 +7,16 @@ import ("fmt"
 
 func main(){
 
-	calculeVrai := true
-
 	var nombre1 , nombre2 float64
 	var operation string
 	var resultat float64
+	var choix string
+
+	effectuerCalcul := true
+
+for effectuerCalcul {
+
+    calculeVrai := true
 
     fmt.Println("Entrer le premier nombre")
 	fmt.Scan(&nombre1)
@@ -47,7 +52,13 @@ func main(){
 	}
 	if calculeVrai == true {
 		fmt.Println(resultat)
+	    }
+	fmt.Println("voulez vous continuer(oui/non)")
+    fmt.Scan(&choix)
+	if choix == "oui"{
+		effectuerCalcul = true
+	} else {
+		effectuerCalcul = false
+	    }
 	}
-
-
 }
